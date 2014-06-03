@@ -1,0 +1,7 @@
+-e git+git@github.com:sorl/sorl-thumbnail.git#egg=sorl
+PIL==1.1.7 #PIL is deprecated, switch to PILLOW?
+requests==1.2.3
+django==1.5.4
+django-config
+MySQL-Python
+python-memcached
