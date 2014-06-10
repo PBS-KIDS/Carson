@@ -15,19 +15,11 @@
     var Carson = function() {
         var protocol = window.location.href.split( '/' )[0];
         var host = window.location.href.split( '/' )[2];
+
         //TODO: Set up your environment settings and CDN site locales here.
         switch (host) {
             case 'example.com':
-                host = 'www-tc.example.com';
-                break;
-            case 'stage.example.com':
-                host = 'stage-tc.example.com';
-                break;
-            case 'dev.example.com':
-                host = 'dev-tc.example.com';
-                break;
-            default:
-                host = 'stage-tc.example.com';
+                host = 'cdn.example.com';
                 break;
         }
 
