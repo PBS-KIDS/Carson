@@ -15,8 +15,7 @@ Installation
 
 settings.py
 
-#. Define memcache configuration (see
-https://docs.djangoproject.com/en/dev/topics/cache/#memcached).
+#. Define memcache configuration (see https://docs.djangoproject.com/en/dev/topics/cache/#memcached).
 #. Add the following to INSTALLED_APPS
 
 #. 'bates.core'
