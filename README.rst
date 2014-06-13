@@ -25,6 +25,8 @@ https://docs.djangoproject.com/en/dev/topics/cache/#memcached).
 
 ``./manage.py syncdb``
 
+``./manage.py collectstatic``
+
 Admin
 -----
 This is where Image Profiles and Origins are created.
