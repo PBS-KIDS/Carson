@@ -12,6 +12,7 @@ setup(
     url = "https://github.com/PBS-KIDS/Carson/",
     packages=find_packages(exclude=('tests',)), 
     install_requires=[
+        'python-memcached>=1.53',
         'django>=1.5.4',
         'sorl-thumbnail==11.12',
         'requests==1.2.3'
