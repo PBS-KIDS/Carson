@@ -1,3 +1,5 @@
+image:: http://dev.pbskids.org/shell/images/content/pbs-kids-logo.png
+
 Introduction
 ------------
 Carson helps you implement current best practices in responsive design,
