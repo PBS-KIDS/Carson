@@ -30,44 +30,40 @@
     <div class="wrapper">
 
       <section>
-        <div id="title">
+        <header id="title">
           <h1>Carson</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/PBS-KIDS">PBS-KIDS</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+          <img src="http://dev.pbskids.org/carson/branding/carson-and-bates_logo.png" alt="Cason &amp; Bates Branding">
+        </header>
+        <p>Carson helps you implement current best practices in responsive design, allowing you to selectively resize or hide images to cater to varying screen form factors. Carson will take care of loading an image over the network in varying sizes automatically. It currently supports PNG and JPEG formats.</p>
         
-        <img src="http://dev.pbskids.org/carson/branding/carson-and-bates_logo.png" alt="Cason &amp; Bates Branding">
-        <p>Carson helps you implement current best practices in responsive design, allowing you to selectively resize or hide images to cater to varying screen form factors. Carson will take care of loading an image over the network in varying sizes automatically. It currently supports PNG and JPEG formats.
-        </p>
+        <h3><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Prerequisite</h3>
+        <ul>
+            <li>Memcache</li>
+        </ul>
+        <h3><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Installation</h3>
+        <pre><code>pip install bates</code></pre>
+        
+        <p>settings.py</p>
+        
+        <ol>
+            <li>Define memcache configuration (see <a href="https://docs.djangoproject.com/en/dev/topics/cache/#memcached">https://docs.djangoproject.com/en/dev/topics/cache/#memcached</a>).</li>
+            <li>Add the following to INSTALLED_APPS</li>
+            <li>'bates.core'</li>
+            <li>'bates.images'</li>
+            <li>'bates.origins'</li>
+        </ol>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<pre><code>./manage.py syncdb</code></pre>
+<pre><code>./manage.py collectstatic</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Admin</h3>
+<p>This is where Image Profiles and Origins are created.</p>
+<p>TODO: Usage instructions and examples.</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>JavaScript</h3>
+<p>Resized images are requested via "data-carson-size" attribute of <code>&lt;img&gt;</code> tags.</p>
+<p>TODO: Usage instructions and examples.</p>
       </section>
 
     </div>
