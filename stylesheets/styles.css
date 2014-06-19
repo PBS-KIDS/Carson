@@ -556,6 +556,11 @@ h1 {
   font-size: 28px;
 }
 
+#title h1{
+  position:absolute;
+  left: -999em;
+}
+
 h2 {
   font-size: 24px;
 }
