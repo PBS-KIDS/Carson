@@ -40,30 +40,34 @@
         <ul>
             <li>Memcache</li>
         </ul>
-        <h3><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Installation</h3>
+        <h3><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Quick Start</h3>
         <pre><code>pip install bates</code></pre>
         
         <p>settings.py</p>
         
         <ol>
-            <li>Define memcache configuration (see <a href="https://docs.djangoproject.com/en/dev/topics/cache/#memcached">https://docs.djangoproject.com/en/dev/topics/cache/#memcached</a>).</li>
+            <li>Define memcache configuration (see <a href="https://docs.djangoproject.com/en/dev/topics/cache/#memcached">https://docs.djangoproject.com/en/1.5/topics/cache/#memcached</a>).</li>
             <li>Add the following to INSTALLED_APPS</li>
             <li>'bates.core'</li>
             <li>'bates.images'</li>
             <li>'bates.origins'</li>
         </ol>
 
-<pre><code>./manage.py syncdb</code></pre>
-<pre><code>./manage.py collectstatic</code></pre>
+<pre><code>./manage.py syncdb
+./manage.py collectstatic</code></pre>
 
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Admin</h3>
-<p>This is where Image Profiles and Origins are created.</p>
-<p>TODO: Usage instructions and examples.</p>
+        <p>urls.py</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>JavaScript</h3>
-<p>Resized images are requested via "data-carson-size" attribute of <code>&lt;img&gt;</code> tags.</p>
-<p>TODO: Usage instructions and examples.</p>
+        <pre><code>from bates.images.views import serve
+
+url(r'(?P&lt;namespace&gt;[\w-]+)/(?P&lt;pathname&gt;.*)', serve),</code></pre>
+
+        <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Admin</h3>
+        <p>TODO: Usage instructions and examples.</p>
+
+        <h3>
+        <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>JavaScript</h3>
+        <p>TODO: Usage instructions and examples.</p>
       </section>
 
     </div>
