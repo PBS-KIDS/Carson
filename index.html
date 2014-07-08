@@ -58,16 +58,38 @@
 
         <p>urls.py</p>
 
-        <pre><code>from bates.images.views import serve
+<pre><code>from bates.images.views import serve_image
+from django.contrib import admin
 
-url(r'(?P&lt;namespace&gt;[\w-]+)/(?P&lt;pathname&gt;.*)', serve),</code></pre>
+urlpatterns = patterns('',
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^static/(?P&lt;path&gt;.*)$', 'django.views.static.serve',
+    url(r'(?P&lt;namespace&gt;[\w-]+)/(?P&lt;pathname&gt;.*)', serve_image),
+)</code></pre>
 
         <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Admin</h3>
-        <p>TODO: Usage instructions and examples.</p>
 
-        <h3>
-        <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>JavaScript</h3>
-        <p>TODO: Usage instructions and examples.</p>
+<pre><code>./manage.py runserver
+./manage.py createsuperuser</code></pre>
+
+        <p>Define Origin</p>
+
+        <ol>
+            <li>Login to the Django Admin</li>
+            <li>Click Origin</li>
+        </ol>
+
+        <p>Define Image Profiles</p>
+
+        <ol>
+            <li>Login to the Django Admin</li>
+            <li>Click Image Profiles</li>
+        </ol>
+
+        <p>JavaScript</p>
+
+<pre><code>&lt;script src="http://localhost:8000/static/js/carson.js"&gt;&lt;/script&gt;</code></pre>
+
       </section>
 
     </div>
