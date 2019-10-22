@@ -15,7 +15,7 @@ setup(
         'python-memcached>=1.53',
         'django>=1.5.4',
         'sorl-thumbnail==11.12',
-        'requests==1.2.3'
+        'requests==2.20.0'
     ],
     include_package_data=True,
     zip_safe=False, # Include static files (carson.js)
